@@ -1,3 +1,11 @@
 import React from 'react';
 
-export default () => <div className="rotate-animate">Dooring</div>;
+interface LoadingCpProps {
+  style?: React.CSSProperties | undefined;
+}
+
+export default ({ style }: LoadingCpProps) => (
+  <div style={style} className="rotate-animate">
+    Dooring
+  </div>
+);

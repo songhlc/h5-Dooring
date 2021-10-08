@@ -57,7 +57,7 @@ const Chart: IChartSchema = {
     title: '柱状图',
     size: 14,
     color: 'rgba(0,0,0,1)',
-    paddingTop: 10,
+    paddingTop: 0,
     data: [
       {
         name: 'A',

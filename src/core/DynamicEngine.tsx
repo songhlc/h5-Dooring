@@ -1,41 +1,52 @@
+import React, { useMemo, memo, FC } from 'react';
 import { dynamic } from 'umi';
+
 import Loading from '../components/LoadingCp';
-import { useMemo, memo, FC } from 'react';
-import React from 'react';
 
-export type componentsType = 'media' | 'base' | 'visible' | 'shop';
+type categoryType = 'component' | 'picture' | 'text';
 
-const DynamicFunc = (type: string, componentsType: string) => {
+type DynamicType = {
+  isTpl: boolean;
+  config: any;
+  type: string;
+  category: categoryType;
+  imgname?: string;
+  id?: string;
+};
+
+const cateMap = {
+  component: 'ComponentLib',
+  picture: 'PictureLib',
+  text: 'TextLib',
+};
+
+const DynamicFunc = (type: string, category: categoryType) => {
   return dynamic({
-    loader: async function() {
-      const { default: Graph } = await import(`@/materials/${componentsType}/${type}`);
-      const Component = Graph;
+    async loader() {
+      let Component: FC<{ isTpl: boolean; imgname?: string; id?: string }>;
+      const { default: Graph } = await import(
+        `@/components/BasicShop/${cateMap[category]}/${type}`
+      );
+      Component = Graph;
+
       return (props: DynamicType) => {
-        const { config, isTpl } = props;
-        return <Component {...config} isTpl={isTpl} />;
+        const { config, isTpl, id, imgname } = props;
+        return <Component {...config} isTpl={isTpl} id={id} imgname={imgname} />;
       };
     },
     loading: () => (
-      <div style={{ paddingTop: 10, textAlign: 'center' }}>
-        <Loading />
+      <div style={{ padding: 4 }}>
+        <Loading style={{ width: 40, height: 40, margin: 'unset' }} />
       </div>
     ),
   });
 };
 
-type DynamicType = {
-  isTpl: boolean;
-  config: { [key: string]: any };
-  type: string;
-  componentsType: componentsType;
-  category: string;
-};
-const DynamicEngine = memo((props: DynamicType) => {
-  const { type, config, category } = props;
+const DynamicEngine: FC<DynamicType> = memo(props => {
+  const { type, config, category, imgname } = props;
   const Dynamic = useMemo(() => {
-    return (DynamicFunc(type, category) as unknown) as FC<DynamicType>;
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [config]);
+    return DynamicFunc(type, category);
+  }, [config, imgname]);
 
   return <Dynamic {...props} />;
 });

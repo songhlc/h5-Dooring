@@ -97,10 +97,6 @@ const HeaderComponent = memo((props: HeaderComponentProps) => {
               使用默认封面
             </Button>
           </div>
-          <div className={styles.formIpt}>
-            <span>访问链接：</span>
-            <Input disabled value="暂未开放，保存之后可以在模版库中访问" />
-          </div>
         </div>
       ),
       okText: '保存',
@@ -230,23 +226,17 @@ const HeaderComponent = memo((props: HeaderComponentProps) => {
           <ArrowLeftOutlined />
         </div>
         <div className={styles.logo} title="Dooring">
-          <a href="/">
-            <img src="http://cdn.dooring.cn/dr/logo.ff7fc6bb.png" alt="Dooring-强大的h5编辑器" />
-          </a>
+          <a href="/"></a>
         </div>
-        <p>再硬的🚪也抵不过傻瓜般的坚持!</p>
       </div>
       <div className={styles.controlArea}>
-        <Button type="primary" style={{ marginRight: '9px' }} onClick={useTemplate}>
-          模版库
-        </Button>
         <Button
           type="link"
           style={{ marginRight: '9px' }}
           onClick={handleSaveTpl}
           disabled={!pointData.length}
         >
-          保存模版
+          保存
         </Button>
         <Upload {...uploadprops}>
           <Button type="link" style={{ marginRight: '8px' }}>
@@ -342,16 +332,6 @@ const HeaderComponent = memo((props: HeaderComponentProps) => {
           title="使用帮助"
         >
           帮助
-        </Button>
-      </div>
-      <div className={styles.btnArea}>
-        <Button type="primary" ghost onClick={toOnlineCoding} style={{ marginRight: '12px' }}>
-          <CodeOutlined />
-          在线编程
-        </Button>
-        <Button type="primary" ghost onClick={toVipLogin} style={{ marginRight: '12px' }}>
-          <SketchOutlined />
-          会员登录
         </Button>
       </div>
       <Modal

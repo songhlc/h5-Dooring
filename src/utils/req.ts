@@ -1,55 +1,69 @@
 import axios from 'axios';
 import { message } from 'antd';
-
-const isDev = process.env.NODE_ENV === 'development';
+import { history } from 'umi';
+import { SERVER_URL } from '@/utils';
 
 const instance = axios.create({
-  // 服务器地址需要自己配置和开发
-  baseURL: isDev ? 'http://localhost:3000/xxx' : 'http://xxxxx',
+  baseURL: `${SERVER_URL}/api/v0`,
   timeout: 10000,
   withCredentials: true,
 });
 
-// 添加请求拦截器
 instance.interceptors.request.use(
   function(config) {
-    // 在发送请求之前做些什么
+    const n = localStorage.getItem('n');
     config.headers = {
-      'x-requested-with': '',
-      authorization: '',
+      'x-requested-with': encodeURIComponent(n || ''),
     };
     return config;
   },
   function(error) {
-    // 对请求错误做些什么
     return Promise.reject(error);
   },
 );
 
-// 添加响应拦截器
 instance.interceptors.response.use(
   function(response) {
-    // 对响应数据做点什么
-    // 你的业务数据
-    return response;
+    if (response.headers['x-show-msg'] === 'zxzk_msg_200') {
+      message.success(response.data.msg, 2);
+    }
+    if (response.data.state === 500) {
+      message.error(response.data.msg, 2);
+      return false;
+    }
+    return response.data.result;
   },
   function(error) {
-    // 对响应错误做点什么
     const { response } = error;
-    if (response) {
-      if (response.status === 404) {
-        message.error('请求资源未发现');
-      } else if (response.status === 403) {
-        message.error(response.data.msg, () => {
-          window.location.href = '/admin/login';
-        });
-      } else {
-        message.error(response.data.msg);
-      }
+    if (response.status === 404) {
+      message.error('请求资源未发现');
+    } else if (response.status === 403) {
+      message.error(response.data.msg, () => {
+        history.push('/user/login');
+        localStorage.clear();
+      });
+    } else {
+      message.error(response.data.msg);
     }
-
     return Promise.reject(error);
   },
 );
 
 export default instance;
+
+export const fetchMapData = (
+  dataType: any,
+  data: any,
+  apiMethod: string,
+  apiAddress: string,
+  cb: Function,
+) => {
+  if ((dataType as string) === 'static') {
+    cb && cb(data);
+  }
+  if ((dataType as string) === 'dynamic') {
+    (instance as any)[apiMethod](apiAddress).then((res: any) => {
+      cb && cb(res);
+    });
+  }
+};

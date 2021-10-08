@@ -21,6 +21,62 @@
     // height: 100vh;
     height: calc(100% - 56px);
     display: flex;
+    .left {
+      display: flex;
+      z-index: 3;
+      .libs {
+        width: 40px;
+        background-color: #141414;
+        .active {
+          background-color: #24282e;
+        }
+        div {
+          height: 40px;
+          line-height: 40px;
+          text-align: center;
+          cursor: pointer;
+        }
+      }
+      .components {
+        width: 160px;
+        padding: 11px 8px;
+        height: calc(100vh - 40px);
+        overflow-y: scroll;
+        background-color: #24282e;
+        .module {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          width: 144px;
+          margin-bottom: 8px;
+          font-size: 12px;
+          color: #fff;
+          cursor: move;
+          .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            width: 100%;
+            .header {
+              width: 100%;
+              height: 20px;
+              line-height: 20px;
+              text-align: center;
+              background-color: #141414;
+            }
+            .content {
+              width: 100%;
+              height: 80px;
+              background-color: #1d1e1f;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
+          }
+        }
+      }
+    }
     .list {
       width: 350px;
       height: 100%;
@@ -47,12 +103,12 @@
         margin-bottom: 20px;
       }
       &Wrap {
-        width: 50%;
+        width: 100%;
         &:nth-child(even) {
           padding-left: 0px;
         }
         &:nth-child(odd) {
-          padding-left: 8px;
+          padding-left: 0px;
         }
       }
       .module {
@@ -78,16 +134,27 @@
       }
     }
     .tickMark {
-      overflow: hidden;
-      height: 100%;
       position: relative;
-      flex: 1;
+      flex: 1 1;
+      height: calc(100vh - 40px);
+      overflow: scroll;
+      background: #141414;
+      .cover {
+        position: fixed;
+        top: 40px;
+        left: 200px;
+        width: 20px;
+        height: 20px;
+        line-height: 20px;
+        text-align: center;
+        background-color: #141414;
+        z-index: 3;
+      }
       .tickMarkTop {
-        width: 100%;
-        height: 50px;
-        position: absolute;
-        top: 0;
-        left: 0;
+        position: fixed;
+        top: 40px;
+        height: 20px;
+        z-index: 2;
       }
       .tickMarkLeft {
         width: 50px;
@@ -97,13 +164,9 @@
         left: 0;
       }
       .canvasBox {
-        width: 375px;
-        min-height: 664px;
-        height: 664px;
         position: relative;
-        left: 50%;
-        margin-left: -200px;
-        top: 80px;
+        left: 50px;
+        top: 50px;
         .canvas {
           position: relative;
           width: 375px;
@@ -193,14 +256,11 @@
       }
     }
     .attrSetting {
-      width: 304px;
-      padding: 23px 0 60px 20px;
-      background: #fff;
-      height: 100%;
-      box-shadow: -2px 0px 4px 0px rgba(0, 0, 0, 0.1);
-      overflow: auto;
       position: fixed;
       right: 0;
+      width: 340px;
+      background: #24282e;
+      z-index: 3;
       .tit {
         margin-bottom: 16px;
         color: #000;
@@ -255,18 +315,19 @@
       }
     }
     .rightcolla {
-      width: 20px;
-      height: 80px;
-      background: #ffffff;
-      box-shadow: -2px 0px 4px 0px rgba(0, 0, 0, 0.1);
       display: flex;
       justify-content: center;
       align-items: center;
-      right: 304px;
+      position: absolute;
       top: 50%;
+      width: 20px;
+      height: 80px;
+      transform: translateY(-50%);
+      background: #24282e;
+      box-shadow: -2px 0 4px 0 rgb(0 0 0 / 10%);
       cursor: pointer;
       &:hover {
-        color: #2f54eb;
+        color: #3f95fd;
       }
     }
   }
@@ -281,3 +342,121 @@
     }
   }
 }
+.ant-form-item-control-input {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 32px;
+}
+.ant-input-number-sm input {
+  height: 22px;
+  padding: 0 7px;
+}
+.ant-input-number-sm {
+  padding: 0;
+}
+.ant-form-item-control-input-content {
+  flex: auto;
+  max-width: 100%;
+}
+.ant-form-horizontal .ant-form-item-control {
+  flex: 1 1;
+}
+.ant-input-number {
+  box-sizing: border-box;
+  font-variant: tabular-nums;
+  list-style: none;
+  font-feature-settings: tnum, 'tnum';
+  position: relative;
+  width: 100%;
+  min-width: 0;
+  color: hsla(0, 0%, 100%, 0.85);
+  font-size: 14px;
+  line-height: 1.5715;
+  background-color: transparent;
+  background-image: none;
+  transition: all 0.3s;
+  display: inline-block;
+  width: 90px;
+  margin: 0;
+  padding: 0;
+  border: 1px solid #434343;
+  border-radius: 2px;
+}
+.ant-input-number-input {
+  width: 100%;
+  height: 30px;
+  padding: 0 11px;
+  text-align: left;
+  background-color: transparent;
+  border: 0;
+  border-radius: 2px;
+  outline: 0;
+  transition: all 0.3s linear;
+  -moz-appearance: textfield !important;
+}
+.ant-input-number-input {
+  width: 100%;
+  height: 30px;
+  padding: 0 11px;
+  text-align: left;
+  background-color: transparent;
+  border: 0;
+  border-radius: 2px;
+  outline: 0;
+  transition: all 0.3s linear;
+  -moz-appearance: textfield !important;
+}
+.ant-form-item-label > label {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  height: 32px;
+  color: hsla(0, 0%, 100%, 0.85);
+  font-size: 14px;
+}
+textarea.ant-input {
+  max-width: 100%;
+  height: auto;
+  min-height: 32px;
+  line-height: 1.5715;
+  vertical-align: bottom;
+  transition: all 0.3s, height 0s;
+}
+.ant-modal-header {
+  padding: 16px 24px !important;
+  color: hsla(0, 0%, 100%, 0.85) !important;
+  background: #1f1f1f !important;
+  border-bottom: 1px solid #303030 !important;
+  border-radius: 2px 2px 0 0 !important;
+}
+.ant-modal-title {
+  margin: 0;
+  color: hsla(0, 0%, 100%, 0.85);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  word-wrap: break-word;
+}
+.ant-modal-body {
+  padding: 24px;
+  font-size: 14px;
+  line-height: 1.5715;
+  word-wrap: break-word;
+}
+.ant-image {
+  position: relative;
+  display: inline-block;
+}
+.images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  .ant-image {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+// ===== //

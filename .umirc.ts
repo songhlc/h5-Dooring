@@ -8,9 +8,15 @@ export default defineConfig({
   dva: {
     immer: true,
   },
+  proxy: {
+    '/bi': {
+      target: 'http://111.229.173.196:8080',
+      changeOrigin: true,
+    },
+  },
   devtool: 'source-map',
   antd: {},
-  title: 'h5-dooring',
+  title: 'designer',
   // exportStatic: {},
   base: '/',
   publicPath: '/',
@@ -63,5 +69,6 @@ export default defineConfig({
     components: path.resolve(__dirname, 'src/components/'),
     utils: path.resolve(__dirname, 'src/utils/'),
     assets: path.resolve(__dirname, 'src/assets/'),
+    less: path.resolve(__dirname, 'src/less/'),
   },
 });

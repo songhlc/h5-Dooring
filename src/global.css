@@ -5,6 +5,7 @@ html, body, #root {
 
 body {
   margin: 0;
+  background-color: #000 !important;
 }
 
 :root {
@@ -19,7 +20,7 @@ body {
 }
 
 .ant-btn.ant-btn-link {
-  color: #2F54EB !important;
+  color: #fff !important;
 }
 
 .ant-btn-background-ghost.ant-btn-primary {
@@ -62,8 +63,8 @@ body {
 .ant-tabs-left.editorTabclass .ant-tabs-tabpane{
   display: flex;
   flex-wrap: wrap;
-  padding-left: 10px!important;
-  padding-right: 10px!important;
+  padding-left: 0!important;
+  padding-right: 0!important;
   padding-bottom: 40px;
 }
 #form_editor {
@@ -74,10 +75,12 @@ body {
   color: #4A4A4A;
 }
 #form_editor .ant-form-item-label {
+  padding-left: 20px;
+    padding-right: 12px;
   text-align: start
 }
 #form_editor .ant-form-item-control {
-  text-align: end;
+  padding-right: 20px;
 }
 #form_editor .ant-form-item {
   margin-bottom: 20px;
@@ -86,8 +89,8 @@ body {
   width: 12px;
 }
 #form_editor .ant-input, #form_editor .ant-input-number,#form_editor .ant-select-selector {
-  background-color: #f6f6f6;
-  width: 160px;
+  /* background-color: #f6f6f6;
+  width: 160px; */
 }
 #form_editor .ant-form-item .ant-select {
   width: 87%;
@@ -96,11 +99,11 @@ body {
 #form_editor .ant-radio-wrapper {
   margin-right: 0;
 }
-#form_editor .ant-input-number {
+/* #form_editor .ant-input-number {
   width: 42px;
   height: 24px;
   border: 1px solid #DBDBDB;
-}
+} */
 #form_editor .ant-input-number-handler-down-inner  {
   text-align: right;
   transform: translateY(-50%) translateX(13%);
@@ -166,3 +169,7 @@ img {
 
 @import '~codemirror/lib/codemirror.css';
 @import '~codemirror/theme/material.css';
+
+#form_editor .ant-form-item-label>label{
+  color: #bcc8d4;
+}
