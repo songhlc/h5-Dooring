@@ -2,7 +2,7 @@
  * @Date: 2021-01-17 14:27:13
  * @LastEditors: chentianshang
  * @LastEditTime: 2021-01-17 21:49:26
- * @FilePath: /github-h5-Dooring/doc/zh/guide/functionRealization/machinePreview.md
+ * @FilePath: /github-app-design/doc/zh/guide/functionRealization/machinePreview.md
 -->
 # 真机预览
 

@@ -2,7 +2,7 @@
  * @Date: 2021-01-17 14:27:28
  * @LastEditors: chentianshang
  * @LastEditTime: 2021-01-17 21:50:17
- * @FilePath: /github-h5-Dooring/doc/zh/guide/functionRealization/revocation.md
+ * @FilePath: /github-app-design/doc/zh/guide/functionRealization/revocation.md
 -->
 # 撤销/重做
 

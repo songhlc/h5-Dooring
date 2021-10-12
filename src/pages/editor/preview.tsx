@@ -54,7 +54,7 @@ const PreviewPage = memo((props: PreviewPageProps) => {
         .then(res => {
           const { pageConfig, tpl } = res || { pageConfig: {}, tpl: [] };
           // 设置标题
-          document.title = pageConfig.title || 'H5-Dooring | 强大的H5编辑神器';
+          document.title = pageConfig.title || 'app-design | 强大的H5编辑神器';
           // 设置数据源
           setPointData(
             tpl.map((item: any) => ({

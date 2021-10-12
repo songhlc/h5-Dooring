@@ -11,7 +11,9 @@ import Qrcode from './Qrcode/schema';
 import Tab from './Tab/schema';
 import Text from './Text/schema';
 import RichText from './RichText/schema';
-
+import Search from './Search/schema';
+// 1.3版本
+// 搜索、导航、公告、图片广告、热区、商品
 const basicSchema = {
   Carousel,
   Form,
@@ -26,5 +28,6 @@ const basicSchema = {
   Tab,
   Text,
   RichText,
+  Search,
 };
 export default basicSchema;

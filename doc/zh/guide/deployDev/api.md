@@ -2,10 +2,10 @@
  * @Date: 2021-01-20 23:25:29
  * @LastEditors: xuxiaoxi
  * @LastEditTime: 2021-01-22 21:48:34
- * @FilePath: /github-h5-Dooring/doc/zh/guide/deployDev/deploy.md
+ * @FilePath: /github-app-design/doc/zh/guide/deployDev/deploy.md
 -->
 
-**H5-Dooring**后端部分主要使用 `Nodejs` 开发, 为了满足更多定制化需求和服务的可移植性, 特意编写了API接口文档,
+**app-design**后端部分主要使用 `Nodejs` 开发, 为了满足更多定制化需求和服务的可移植性, 特意编写了API接口文档,
 方便大家使用不同的后端语言实现服务接入. 
 - 注意: 接口统一前缀为`/api/v0`
 
@@ -576,7 +576,7 @@
 {
     "state": 200,
     "result": {
-        "filename": "H5-Dooring",
+        "filename": "app-design",
         "url": "http://h5.dooring.cn/uploads/1_17ac208480d.png",
         "size": 261972
     },

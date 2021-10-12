@@ -2,7 +2,7 @@
  * @Date: 2021-01-17 14:27:49
  * @LastEditors: chentianshang
  * @LastEditTime: 2021-01-17 21:49:46
- * @FilePath: /github-h5-Dooring/doc/zh/guide/functionRealization/screenshot.md
+ * @FilePath: /github-app-design/doc/zh/guide/functionRealization/screenshot.md
 -->
 # 截图功能
 

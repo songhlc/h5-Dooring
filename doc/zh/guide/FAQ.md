@@ -1,6 +1,6 @@
 <img src="http://cdn.dooring.cn/dr/logo.ff7fc6bb.png" alt="dooring" width=200>
 
-H5-Dooring 仍在持续迭代, 如果有任何问题, 可以点击 [立即反馈](http://h5.dooring.cn/h5?tid=86C45FAE)。
+app-design 仍在持续迭代, 如果有任何问题, 可以点击 [立即反馈](http://h5.dooring.cn/h5?tid=86C45FAE)。
 
 ## 问题汇总
 

@@ -12,5 +12,5 @@ features:
       details: 目前正在持续迭代中，后续可根据需求开发功能更强大的可视化系统
 actionText: 快速上手 →
 actionLink: /zh/guide/
-footer: GPL Licensed | Copyright © 2020-present H5-Dooring
+footer: GPL Licensed | Copyright © 2020-present app-design
 ---

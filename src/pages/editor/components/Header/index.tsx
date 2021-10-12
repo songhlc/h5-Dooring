@@ -231,15 +231,11 @@ const HeaderComponent = memo((props: HeaderComponentProps) => {
         </div>
         <div className={styles.logo} title="Dooring">
           <a href="/">
-            <img src="http://cdn.dooring.cn/dr/logo.ff7fc6bb.png" alt="Dooring-强大的h5编辑器" />
+            <img src="" alt="" />
           </a>
         </div>
-        <p>再硬的🚪也抵不过傻瓜般的坚持!</p>
       </div>
       <div className={styles.controlArea}>
-        <Button type="primary" style={{ marginRight: '9px' }} onClick={useTemplate}>
-          模版库
-        </Button>
         <Button
           type="link"
           style={{ marginRight: '9px' }}
@@ -310,29 +306,8 @@ const HeaderComponent = memo((props: HeaderComponentProps) => {
         <Button type="link" style={{ marginRight: '9px' }} title="重做" onClick={redohandler}>
           <RedoOutlined />
         </Button>
-        <Tooltip placement="bottom" title="一键生成海报分享图">
-          <Badge dot offset={[-18, 10]}>
-            <Button
-              type="link"
-              style={{ marginRight: '6px' }}
-              onClick={generatePoster}
-              disabled={!pointData.length}
-            >
-              <InstagramOutlined />
-            </Button>
-          </Badge>
-        </Tooltip>
         <Button type="link" onClick={toPreview} disabled={!pointData.length}>
           预览
-        </Button>
-        <Button
-          type="link"
-          style={{ marginRight: '5px' }}
-          title="一键分享"
-          onClick={toShare}
-          disabled={!pointData.length}
-        >
-          <WechatOutlined />
         </Button>
         <Button
           type="link"
@@ -342,16 +317,6 @@ const HeaderComponent = memo((props: HeaderComponentProps) => {
           title="使用帮助"
         >
           帮助
-        </Button>
-      </div>
-      <div className={styles.btnArea}>
-        <Button type="primary" ghost onClick={toOnlineCoding} style={{ marginRight: '12px' }}>
-          <CodeOutlined />
-          在线编程
-        </Button>
-        <Button type="primary" ghost onClick={toVipLogin} style={{ marginRight: '12px' }}>
-          <SketchOutlined />
-          会员登录
         </Button>
       </div>
       <Modal

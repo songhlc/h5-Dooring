@@ -2,7 +2,7 @@
  * @Date: 2021-01-17 12:25:33
  * @LastEditors: chentianshang
  * @LastEditTime: 2021-01-17 19:42:42
- * @FilePath: /github-h5-Dooring/doc/zh/guide/componentDev/componentStructure.md
+ * @FilePath: /github-app-design/doc/zh/guide/componentDev/componentStructure.md
 -->
 # 组件结构
 

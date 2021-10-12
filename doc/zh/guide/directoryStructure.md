@@ -192,9 +192,6 @@ src
 │  │  ├─ cate.js
 │  │  ├─ index.js
 │  │  └─ index.less
-│  └─ Zan
-│     ├─ index.less
-│     └─ index.tsx
 ├─ core
 │  ├─ FormComponents
 │  │  ├─ CardPicker

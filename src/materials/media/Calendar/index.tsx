@@ -32,7 +32,7 @@ const CalendarCp = memo((props: ICalendarConfig & { isTpl: boolean }) => {
     <>
       {isTpl ? (
         <div>
-          <img src={logo} style={{ width: '100%' }} alt="h5-dooring日历组件"></img>
+          <img src={logo} style={{ width: '100%' }} alt="app-design日历组件"></img>
         </div>
       ) : (
         <div

@@ -10,7 +10,7 @@ const Mapcomponent = memo((props: IMapConfig & { isTpl: boolean }) => {
     <>
       {isTpl ? (
         <div>
-          <img src={logo} style={{ width: '100%' }} alt="h5-dooring音频播放组件"></img>
+          <img src={logo} style={{ width: '100%' }} alt="app-design音频播放组件"></img>
         </div>
       ) : (
         <div className={styles.mapWrap}>

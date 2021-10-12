@@ -3,7 +3,6 @@ import { Controlled } from 'react-codemirror2';
 import { useState } from 'react';
 import { Button, message } from 'antd';
 import { saveAs } from 'file-saver';
-import Logo from '@/assets/logo.png';
 import styles from './index.less';
 import { isDev, useGetRect } from 'utils/tool';
 import { SaveOutlined } from '@ant-design/icons';
@@ -40,7 +39,7 @@ let html = `<!DOCTYPE html>
     <div id="root">
       <img src="http://io.nainor.com/uploads/logo_1747374040f.png" />
       <p>
-        (H5编辑器)H5-Dooring是一款功能强大，开源免费的H5可视化页面配置解决方案，
+        (H5编辑器)app-design是一款功能强大，开源免费的H5可视化页面配置解决方案，
         致力于提供一套简单方便、专业可靠、无限可能的H5落地页最佳实践。
       </p>
     </div>
@@ -134,11 +133,7 @@ export default function() {
     <div className={styles.wrap}>
       <div className={styles.header}>
         <div className={styles.logoArea}>
-          <div className={styles.logo} title="Dooring">
-            <a href="http://h5.dooring.cn">
-              <img src={Logo} alt="Dooring-强大的h5编辑器" />
-            </a>
-          </div>
+          <div className={styles.logo} title="app-design"></div>
           <div className={styles.logoText}>| 在线代码编辑器</div>
         </div>
         <div className={styles.operationBar}>

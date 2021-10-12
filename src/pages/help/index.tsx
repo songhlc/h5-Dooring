@@ -10,7 +10,7 @@ import styles from './index.less';
 const Help = () => {
   return (
     <div className={styles.helpWrap}>
-      <h2>H5-Dooring使用指南</h2>
+      <h2>app-design使用指南</h2>
       <div className={styles.helpItem}>
         <h3>1. 首页功能介绍</h3>
         <div className={styles.imgWrap}>

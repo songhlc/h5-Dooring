@@ -2,10 +2,10 @@
  * @Date: 2021-01-20 23:25:29
  * @LastEditors: xuxiaoxi
  * @LastEditTime: 2021-01-22 21:48:34
- * @FilePath: /github-h5-Dooring/doc/zh/guide/deployDev/deploy.md
+ * @FilePath: /github-app-design/doc/zh/guide/deployDev/deploy.md
 -->
 
-目前**H5-Dooring**全面支持https部署, 具体方式方案如下.
+目前**app-design**全面支持https部署, 具体方式方案如下.
 
 ### 前端工程
 

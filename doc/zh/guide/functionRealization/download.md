@@ -2,7 +2,7 @@
  * @Date: 2021-01-17 14:26:00
  * @LastEditors: xuxiaoxi
  * @LastEditTime: 2021-05-17 21:32:58
- * @FilePath: /github-h5-Dooring/doc/zh/guide/functionRealization/saveJson.md
+ * @FilePath: /github-app-design/doc/zh/guide/functionRealization/saveJson.md
 -->
 ## 下载源码
 目前Dooring已支持下载源码功能, 我们可以使用编辑器页面头部的下载按钮来实现下载用户搭建的H5源码.

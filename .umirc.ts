@@ -10,7 +10,7 @@ export default defineConfig({
   },
   devtool: 'source-map',
   antd: {},
-  title: 'h5-dooring',
+  title: 'app-design',
   // exportStatic: {},
   base: '/',
   publicPath: '/',

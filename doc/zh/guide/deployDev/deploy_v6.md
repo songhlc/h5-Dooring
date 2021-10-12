@@ -2,7 +2,7 @@
  * @Date: 2021-01-20 23:25:29
  * @LastEditors: xuxiaoxi
  * @LastEditTime: 2021-01-22 21:48:34
- * @FilePath: /github-h5-Dooring/doc/zh/guide/deployDev/deploy.md
+ * @FilePath: /github-app-design/doc/zh/guide/deployDev/deploy.md
 -->
 
 私有化部署需要获取3个核心项目包, 包括
@@ -14,7 +14,7 @@
 
 ### 部署架构图
 
-<img src="../../../img/common/v6.deploy.png" alt="H5-dooring部署">
+<img src="../../../img/common/v6.deploy.png" alt="app-design部署">
 
 部署流程如下:
 

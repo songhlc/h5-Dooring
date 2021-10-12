@@ -2,7 +2,7 @@
  * @Date: 2021-01-20 23:25:29
  * @LastEditors: xuxiaoxi
  * @LastEditTime: 2021-01-22 21:48:34
- * @FilePath: /github-h5-Dooring/doc/zh/guide/deployDev/deploy.md
+ * @FilePath: /github-app-design/doc/zh/guide/deployDev/deploy.md
 -->
 
 服务端主要是我们的`server`工程, 数据主要存放在`server/public`下, 具体数据指代含义我们接下来会详细介绍.

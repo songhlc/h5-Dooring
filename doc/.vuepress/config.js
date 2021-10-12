@@ -1,6 +1,6 @@
 module.exports = {
   base: '/doc/',
-  title: 'h5-dooring',
+  title: 'app-design',
   dest: './doc-dist',
   themeConfig: {
     search: false,

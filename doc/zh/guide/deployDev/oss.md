@@ -2,10 +2,10 @@
  * @Date: 2021-01-20 23:25:29
  * @LastEditors: xuxiaoxi
  * @LastEditTime: 2021-01-22 21:48:34
- * @FilePath: /github-h5-Dooring/doc/zh/guide/deployDev/deploy.md
+ * @FilePath: /github-app-design/doc/zh/guide/deployDev/deploy.md
 -->
 
-**H5-Dooring**全面支持第三方对象存储服务, 我们以七牛云对象存储为例.
+**app-design**全面支持第三方对象存储服务, 我们以七牛云对象存储为例.
 
 ### 前端上传文件到oss
 首先我们需要在第三方对象储存服务中配置对应的服务和域名. 其次安装对应的sdk, 如七牛云sdk:
@@ -41,7 +41,7 @@ observe.subscribe(() => {}, null, (res) => {
 })
 ```
 
-其他oss服务类似, 如果不清楚如何配置, 可以在[H5-Dooring官网](http://h5.dooring.cn/)中找到我们.
+其他oss服务类似, 如果不清楚如何配置, 可以在[app-design官网](http://h5.dooring.cn/)中找到我们.
 
 ### 如何接入任何第三方上传服务
 

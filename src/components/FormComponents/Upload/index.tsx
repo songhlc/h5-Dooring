@@ -90,7 +90,7 @@ class PicturesWall extends React.Component<PicturesWallType> {
     const fileList = [
       {
         uid: uuid(8, 16),
-        name: 'h5-dooring图片库',
+        name: 'app-design图片库',
         status: 'done',
         url: this.state.curSelectedImg,
       },
@@ -249,7 +249,7 @@ class PicturesWall extends React.Component<PicturesWallType> {
                             key={i}
                             onClick={() => this.handleImgSelected(item)}
                           >
-                            <img src={item} alt="趣谈前端-h5-dooring" />
+                            <img src={item} alt="趣谈前端-app-design" />
                             <span className={styles.iconBtn}>
                               <CheckCircleFilled />
                             </span>

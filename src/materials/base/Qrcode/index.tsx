@@ -1,13 +1,12 @@
 import React, { memo } from 'react';
 import { IQrcodeConfig } from './schema';
-import logo from '@/assets/qrcode.png';
 const Qrcode = memo((props: IQrcodeConfig & { isTpl: boolean }) => {
   const { qrcode, text, color, fontSize = 14, isTpl } = props;
   return (
     <>
       {isTpl ? (
         <div>
-          <img src={logo} alt=""></img>
+          <img alt="qrcode"></img>
         </div>
       ) : (
         <div style={{ width: '100%', maxWidth: '220px', margin: '16px auto' }}>

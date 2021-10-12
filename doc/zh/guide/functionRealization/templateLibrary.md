@@ -2,7 +2,7 @@
  * @Date: 2021-01-17 14:25:29
  * @LastEditors: chentianshang
  * @LastEditTime: 2021-01-17 21:48:34
- * @FilePath: /github-h5-Dooring/doc/zh/guide/functionRealization/templateLibrary.md
+ * @FilePath: /github-app-design/doc/zh/guide/functionRealization/templateLibrary.md
 -->
 ## 模板库实现思路
 

@@ -2,7 +2,7 @@
  * @Date: 2021-01-17 14:26:41
  * @LastEditors: chentianshang
  * @LastEditTime: 2021-01-17 21:49:18
- * @FilePath: /github-h5-Dooring/doc/zh/guide/functionRealization/pagePreview.md
+ * @FilePath: /github-app-design/doc/zh/guide/functionRealization/pagePreview.md
 -->
 # 网页预览
 

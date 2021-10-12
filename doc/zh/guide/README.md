@@ -1,6 +1,6 @@
 <img src="http://cdn.dooring.cn/dr/logo.ff7fc6bb.png" alt="dooring" width=200>
 
-H5-Dooring 是一款功能强大，高可扩展的 H5 可视化页面配置解决方案，致力于提供一套简单方便、专业可靠、无限可能的 H5 落地页最佳实践。
+app-design 是一款功能强大，高可扩展的 H5 可视化页面配置解决方案，致力于提供一套简单方便、专业可靠、无限可能的 H5 落地页最佳实践。
 
 ## 功能特点
 
