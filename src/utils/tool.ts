@@ -26,8 +26,30 @@ function uuid(len: number, radix: number) {
   return uuid.join('');
 }
 
+function HexToRgba(hex = '') {
+  var color = hex;
+  var pattern = /^#([0-9|a-f]{3}|[0-9|a-f]{6})$/;
+  if (color && pattern.test(color)) {
+    if (color.length == 4) {
+      // 将三位转换为六位
+      color = '#' + color[1] + color[1] + color[2] + color[2] + color[3] + color[3];
+    }
+    //处理六位的颜色值
+    var colorNew = [];
+    for (var i = 1; i < 7; i += 2) {
+      colorNew.push(parseInt('0x' + color.slice(i, i + 2)));
+    }
+    return 'rgba(' + colorNew.join(',') + ',1)';
+  }
+  return color;
+}
+
 // 将rgba字符串对象转化为rgba对象
 function rgba2Obj(rgba = '') {
+  // 如果传入的是16进制的数据,那么转换为rgba
+  if (rgba.indexOf('#') === 0) {
+    rgba = HexToRgba(rgba);
+  }
   let reg = /rgba\((\d+),(\d+),(\d+),(\d+)\)/g;
   let rgbaObj: RGBColor = { r: 0, g: 0, b: 0, a: 0 };
 

@@ -12,9 +12,12 @@ import Text from './Text/template';
 import WhiteTpl from './WhiteTpl/template';
 import RichText from './RichText/template';
 import Search from './Search/template';
+import QuickLink from './QuickLink/template';
 
 const basicTemplate = [
   Carousel,
+  Search,
+  QuickLink,
   Form,
   Header,
   Icon,
@@ -27,7 +30,6 @@ const basicTemplate = [
   Text,
   WhiteTpl,
   RichText,
-  Search,
 ];
 const BasicTemplate = basicTemplate.map(v => {
   return { ...v, category: 'base' };

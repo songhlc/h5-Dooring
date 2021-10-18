@@ -18,3 +18,10 @@ editor说明
   - 对应 renderRight 变量的组件
 
 注意:targetBox和SourceBox引入的时候组件名是反的要注意.
+
+
+## 画布区域,布局
+画布区域手机端部剧使用了react-grid-layout组件,见ViewRender.tsx
+
+## 如何开发一个组件
+参考src/materials/base/Search/

@@ -108,3 +108,4 @@ typings/
 # production
 /dist
 /doc-dist
+.DS_Store/

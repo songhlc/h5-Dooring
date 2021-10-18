@@ -1,19 +1,18 @@
 import {
-  IDataListConfigType,
-  IRadioConfigType,
-  ISwitchConfigType,
-  INumberConfigType,
   TColorDefaultType,
   IColorConfigType,
+  ITextConfigType,
+  TTextDefaultType,
 } from '@/components/FormComponents/types';
 
 export type CarouselDirectionKeyType = 'down' | 'left';
 
-export type TSearchEditData = Array<IColorConfigType>;
+export type TSearchEditData = Array<IColorConfigType | ITextConfigType>;
 export interface ISearchConfig {
   bgColor: TColorDefaultType; // 背景色
   searchBgColor: TColorDefaultType; //搜索条背景色
   color: TColorDefaultType; // 搜索文字颜色
+  placeholder: TTextDefaultType;
 }
 
 export interface ISearchSchema {
@@ -38,11 +37,17 @@ const Search: ISearchSchema = {
       name: '搜索文字颜色',
       type: 'Color',
     },
+    {
+      key: 'placeholder',
+      name: '搜索提示',
+      type: 'Text',
+    },
   ],
   config: {
-    bgColor: 'rgba(255,0,0,0)',
-    searchBgColor: 'rgba(255,255,255,0)',
-    color: 'rgba(0,0,0,0)',
+    bgColor: '#d9001b',
+    searchBgColor: '#fff',
+    color: '#dd1f36',
+    placeholder: '请输入商品名称或编码',
   },
 };
 export default Search;

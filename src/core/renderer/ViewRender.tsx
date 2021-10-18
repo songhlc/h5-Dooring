@@ -39,11 +39,13 @@ const ViewRender = memo((props: ViewProps) => {
         backgroundRepeat: 'no-repeat',
       }}
     >
-      {pointData.map((value: PointDataItem) => (
-        <div key={value.id} data-grid={value.point} className={onDragStart && styles.dragItem}>
-          <DynamicEngine {...(value.item as any)} isTpl={false} />
-        </div>
-      ))}
+      {pointData.map((value: PointDataItem) => {
+        return (
+          <div key={value.id} data-grid={value.point} className={onDragStart && styles.dragItem}>
+            <DynamicEngine {...(value.item as any)} isTpl={false} />
+          </div>
+        );
+      })}
     </GridLayout>
   );
 });

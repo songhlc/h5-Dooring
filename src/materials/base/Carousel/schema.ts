@@ -8,6 +8,8 @@ import {
   TSwitchDefaultType,
   TNumberDefaultType,
 } from '@/components/FormComponents/types';
+import banner1 from '@/assets/banner1.jpg';
+import banner2 from '@/assets/banner2.jpg';
 
 export type CarouselDirectionKeyType = 'down' | 'left';
 
@@ -85,7 +87,7 @@ const Carousel: ICarouselSchema = {
             uid: '001',
             name: 'image.png',
             status: 'done',
-            url: 'http://h5.dooring.cn/uploads/1_1740bd7c3dc.png',
+            url: banner2,
           },
         ],
       },
@@ -99,12 +101,12 @@ const Carousel: ICarouselSchema = {
             uid: '001',
             name: 'image.png',
             status: 'done',
-            url: 'http://h5.dooring.cn/uploads/1_1740bd7c3dc.png',
+            url: banner1,
           },
         ],
       },
     ],
-    tplImg: 'http://h5.dooring.cn/uploads/1_1740bd7c3dc.png',
+    tplImg: banner2,
   },
 };
 export default Carousel;
