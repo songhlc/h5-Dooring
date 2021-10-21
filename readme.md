@@ -22,3 +22,9 @@ app设计器
 https://yapk04.axshare.com/
 
 1.3=》店铺装修 =》微页面管理
+
+
+
+本地开发如何登录:
+
+http://localhost:8080/yn-scm  登录后本地代理(.umirc.ts中配置)会跳转到,http://39.108.212.191:8016/yn-scm,手工把url再改成 http://localhost:8080/editor?id=xx  就行

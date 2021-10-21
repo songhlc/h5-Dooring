@@ -5,7 +5,7 @@ const isDev = process.env.NODE_ENV === 'development';
 
 const instance = axios.create({
   // 服务器地址需要自己配置和开发
-  baseURL: isDev ? 'http://localhost:3000/xxx' : 'http://xxxxx',
+  baseURL: isDev ? '/yn-scm' : 'http://xxxxx',
   timeout: 10000,
   withCredentials: true,
 });
@@ -15,8 +15,9 @@ instance.interceptors.request.use(
   function(config) {
     // 在发送请求之前做些什么
     config.headers = {
-      'x-requested-with': '',
-      authorization: '',
+      'x-requested-with': 'XMLHttpRequest',
+      // authorization: '',
+      'X-CSRF-Token': '600ac19e-aad4-4a5d-829e-2f18f4a65646',
     };
     return config;
   },

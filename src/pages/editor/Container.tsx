@@ -25,6 +25,7 @@ import shopTpl from '@/materials/shop/template';
 import schemaH5 from '@/materials/schema';
 import { ActionCreators, StateWithHistory } from 'redux-undo';
 import { throttle, detectMobileBrowser, getBrowserNavigatorMetaInfo } from '@/utils/tool';
+import req from '@/utils/req';
 
 import styles from './index.less';
 
@@ -146,6 +147,16 @@ const Container = (props: {
     }
   }, [pstate.curPoint]);
 
+  useEffect(() => {
+    var id = props.location.query.tid;
+    if (id) {
+      req.get('ws/micro_page/detail?id=' + id).then(res => {
+        debugger;
+      });
+    } else {
+      console.log('参数异常!');
+    }
+  }, []);
   const allType = useMemo(() => {
     let arr: string[] = [];
     template.forEach(v => {

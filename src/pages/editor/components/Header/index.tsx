@@ -83,33 +83,34 @@ const HeaderComponent = memo((props: HeaderComponentProps) => {
             <span>模版名称：</span>
             <Input ref={iptRef} />
           </div>
-          <div className={styles.formIpt}>
-            <span>封面设置：</span>
-            <Button
-              type="primary"
-              size="small"
-              style={{ marginRight: '20px' }}
-              onClick={() => generateFace(1)}
-            >
-              一键生成封面
-            </Button>
-            <Button size="small" onClick={() => generateFace(0)}>
-              使用默认封面
-            </Button>
-          </div>
-          <div className={styles.formIpt}>
-            <span>访问链接：</span>
-            <Input disabled value="暂未开放，保存之后可以在模版库中访问" />
-          </div>
         </div>
       ),
       okText: '保存',
       cancelText: '取消',
       onOk() {
         let name = iptRef.current!.state.value;
-        req.post('/visible/tpl/save', { name, tpl: pointData }).then(res => {
-          console.log(res);
-        });
+        var data = window.localStorage.getItem('userData');
+        var id = props.location.query.tid;
+        var companyId = props.location.query.companyId || 1;
+        if (id) {
+          req
+            .post('/ws/micro_page/update', {
+              id: id,
+              name: name,
+              streamlineInfo: data,
+              originalInfo: data,
+              companyId: companyId,
+            })
+            .then(res => {
+              if (res.data.status === 200) {
+                alert('保存成功');
+              } else {
+                alert(res.data.data);
+              }
+            });
+        } else {
+          console.error('id 不存在!');
+        }
       },
       onCancel() {
         console.log('Cancel');

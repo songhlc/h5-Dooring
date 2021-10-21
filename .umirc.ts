@@ -64,4 +64,10 @@ export default defineConfig({
     utils: path.resolve(__dirname, 'src/utils/'),
     assets: path.resolve(__dirname, 'src/assets/'),
   },
+  proxy: {
+    '/yn-scm': {
+      target: 'http://39.108.212.191:8016/',
+      changeOrigin: true,
+    },
+  },
 });
